@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="warn" monitorInterval="30" strict="true" schema="Log4J-V2.2.xsd">
+
+    <properties>
+        <property name="LOG_HOME">/home/logs/dms-web</property>
+        <property name="APP_LOG_FILE_NAME">sys</property>
+    </properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %-5p (%F:%L) - %m%n" />
+        </Console>
+
+        <!--<appender name="catAppender" class="com.dianping.cat.log4j.CatAppender" />-->
+
+        <!--<RollingRandomAccessFile name="app" fileName="${LOG_HOME}/${APP_LOG_FILE_NAME}.log"-->
+                                 <!--filePattern="${LOG_HOME}/${APP_LOG_FILE_NAME}.log.%d{yyyy-MM-dd}.gz">-->
+            <!--<PatternLayout charset="UTF-8" pattern="%d %-5p (%F:%L) - %m%n"/>-->
+            <!--<Policies>-->
+                <!--<TimeBasedTriggeringPolicy/>-->
+                <!--<SizeBasedTriggeringPolicy size="2000 MB"/>-->
+            <!--</Policies>-->
+            <!--<DefaultRolloverStrategy max="20"/>-->
+        <!--</RollingRandomAccessFile>-->
+    </Appenders>
+
+    <Loggers>
+        <Root level="info"> <!-- 全局配置 -->
+            <AppenderRef ref="Console" />
+            <!--<AppenderRef ref="app"/>-->
+            <!--<AppenderRef ref="catAppender"/>-->
+        </Root>
+    </Loggers>
+</Configuration>
