@@ -26,7 +26,48 @@ public class LogAspectAdvice {
         if (!name.contains(FILTER_LIST)) {
 //            log.info("调用方法：{}.{}:{}", typeName, name, args);
         }
+   
     }
+    
+    //    @Around(value = "execution(* com.baturu.dms.*.service.*.*(..))")
+
+//    public Object serviceCatInterceptor(ProceedingJoinPoint joinPoint) throws Throwable {
+
+//        Signature signature = joinPoint.getSignature();
+
+//        String className = signature.getDeclaringTypeName();
+
+//        String methodName = signature.getName();
+
+//        String dataSourceKey = DataSourceContextHolder.getDataSourceKey();
+
+//        Transaction transaction = Cat.newTransaction("Call", "(" + dataSourceKey + ") " + className + "." + methodName);
+
+//        Object proceed = null;
+
+//        try {
+
+//            proceed = joinPoint.proceed();
+
+//            transaction.setStatus(Transaction.SUCCESS);
+
+//            return proceed;
+
+//        } catch (Exception e) {
+
+//            Cat.logError(e);
+
+//            transaction.setStatus(e);
+
+//        } finally {
+
+//            transaction.complete();
+
+//            return proceed;
+
+//        }
+
+//    }
 
 //    @Around(value = "execution(* com.baturu.dms.*.service.*.*(..))")
 //    public Object serviceCatInterceptor(ProceedingJoinPoint joinPoint) throws Throwable {
