@@ -26,7 +26,10 @@ public class LogAspectAdvice {
         if (!name.contains(FILTER_LIST)) {
 //            log.info("调用方法：{}.{}:{}", typeName, name, args);
         }
-    }//    @Around(value = "execution(* com.baturu.dms.*.service.*.*(..))")
+   
+    }
+    
+    //    @Around(value = "execution(* com.baturu.dms.*.service.*.*(..))")
 
 //    public Object serviceCatInterceptor(ProceedingJoinPoint joinPoint) throws Throwable {
 
