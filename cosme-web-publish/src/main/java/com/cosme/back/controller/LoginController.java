@@ -2,6 +2,7 @@ package com.cosme.back.controller;
 
 import com.cosme.back.adapter.UserAdapter;
 import com.cosme.back.service.UserService;
+import com.cosme.common.constant.AppConfig;
 import com.cosme.common.constant.StateCode;
 import com.cosme.common.dto.ResultDTO;
 import com.cosme.common.util.AESUtil;
@@ -12,6 +13,7 @@ import com.cosme.request.UserRequest;
 import com.cosme.vo.UserVO;
 import com.google.common.collect.Sets;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
@@ -20,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Tanlian
@@ -33,14 +36,16 @@ public class LoginController {
     private UserService userService;
     @Autowired
     private UserAdapter userAdapter;
+    @Autowired
+    private AppConfig appConfig;
+    @Autowired
+    private RedisTemplate<String, String> redisTemplate;
+
+    private static final String LOGIN_USERNAME_KEY = "COSME_LOGIN_NAME:";
 
     /**
      * 用户登录
-     * @param username
-     * @param password
-     * @param request
-     * @param response
-     * @return
+     *
      */
     @RequestMapping(value = "login", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     public ResultDTO<UserVO> login(@RequestParam String username, @RequestParam String password,
@@ -59,7 +64,12 @@ public class LoginController {
         String publickey = userDTO.getPublicKey();
         String encryPassword = AESUtil.encrypt(password, publickey);
         System.out.println(encryPassword.length());
-       if (!encryPassword.equals(passwordFromDB)) {
+        if (!encryPassword.equals(passwordFromDB)) {
+            Long loginFailures = redisTemplate.opsForValue().increment(LOGIN_USERNAME_KEY + username, 1);
+            if (loginFailures > appConfig.getLoginFailures()) {
+                redisTemplate.expire(LOGIN_USERNAME_KEY + username, appConfig.getLoginFailures(), TimeUnit.SECONDS);
+                return ResultDTO.fail(StateCode.ILLEGAL_ARGS, "密码次数错误过多," + appConfig.getBannedSeconds() / 60 + "分钟后重试");
+            }
             return ResultDTO.fail(StateCode.ILLEGAL_ARGS, "用户密码错误,请重新输入");
         }
         String userId = userDTO.getUserId();
@@ -69,6 +79,7 @@ public class LoginController {
 
     /**
      * 退出登录
+     *
      * @param request
      * @param response
      * @return
@@ -81,6 +92,7 @@ public class LoginController {
 
     /**
      * 用户注册
+     *
      * @param userRequest
      * @return
      */

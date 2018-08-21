@@ -14,7 +14,6 @@
 
     <properties>
         <pojo.version>1.0-SNAPSHOT</pojo.version>
-
         <poi.version>3.16</poi.version>
         <cat.version>1.3.3</cat.version>
         <jodd.version>3.8.5</jodd.version>

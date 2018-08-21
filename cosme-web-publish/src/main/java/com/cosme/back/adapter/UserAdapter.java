@@ -57,59 +57,7 @@ public class UserAdapter {
         return ResultDTO.successfy();
     }
 
-    public ResultDTO<Void> addUser3(UserRequest userRequest) {
-        if (userRequest == null) {
-            return ResultDTO.fail(StateCode.ILLEGAL_ARGS, "请输入对应信息");
-        }
-        if (!StringUtils.hasText(userRequest.getUsername())){
-            return ResultDTO.fail(StateCode.ILLEGAL_ARGS, "请输入用户名");
-        }
-        if (!StringUtils.hasText(userRequest.getPassword())) {
-            return ResultDTO.fail(StateCode.ILLEGAL_ARGS, "请输入密码");
-        }
-        UserQueryParam userQueryParam = new UserQueryParam();
-        userQueryParam.setUsernames(Sets.newHashSet(userRequest.getUsername()));
-        List<UserDTO> userDTOs = userService.queryByParam(userQueryParam);
-        if (!CollectionUtils.isEmpty(userDTOs)) {
-            return ResultDTO.fail(StateCode.ILLEGAL_ARGS,"用户名已存在，请重新输入");
-        }
-        UserDTO userDTO = new UserDTO();
-        userDTO.setPublicKey(SessionUtils.PUBLIC_KEY);
-        userDTO.setUsername(userRequest.getUsername());
-        String password = userRequest.getPassword();
-        String encryPassword = AESUtil.encrypt(password, SessionUtils.PUBLIC_KEY);
-        userDTO.setPassword(encryPassword);
-        String uuid = UUID.randomUUID().toString();
-        userDTO.setUserId(uuid.replace("-",""));
-        userService.saveUser(userDTO);
-        return ResultDTO.successfy();
-    }
 
-    public ResultDTO<Void> addUser2(UserRequest userRequest) {
-        if (userRequest == null) {
-            return ResultDTO.fail(StateCode.ILLEGAL_ARGS, "请输入对应信息");
-        }
-        if (!StringUtils.hasText(userRequest.getUsername())){
-            return ResultDTO.fail(StateCode.ILLEGAL_ARGS, "请输入用户名");
-        }
-        if (!StringUtils.hasText(userRequest.getPassword())) {
-            return ResultDTO.fail(StateCode.ILLEGAL_ARGS, "请输入密码");
-        }
-        UserQueryParam userQueryParam = new UserQueryParam();
-        userQueryParam.setUsernames(Sets.newHashSet(userRequest.getUsername()));
-        List<UserDTO> userDTOs = userService.queryByParam(userQueryParam);
-        if (!CollectionUtils.isEmpty(userDTOs)) {
-            return ResultDTO.fail(StateCode.ILLEGAL_ARGS,"用户名已存在，请重新输入");
-        }
-        UserDTO userDTO = new UserDTO();
-        userDTO.setPublicKey(SessionUtils.PUBLIC_KEY);
-        userDTO.setUsername(userRequest.getUsername());
-        String password = userRequest.getPassword();
-        String encryPassword = AESUtil.encrypt(password, SessionUtils.PUBLIC_KEY);
-        userDTO.setPassword(encryPassword);
-        String uuid = UUID.randomUUID().toString();
-        userDTO.setUserId(uuid.replace("-",""));
-        userService.saveUser(userDTO);
-        return ResultDTO.successfy();
-    }
+
+
 }
