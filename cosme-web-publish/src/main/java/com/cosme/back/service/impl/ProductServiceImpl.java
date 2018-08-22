@@ -5,7 +5,7 @@ import com.cosme.back.service.ChannelService;
 import com.cosme.back.service.ProductService;
 import com.cosme.back.service.UserService;
 import com.cosme.back.transformers.ProductTransformers;
-import com.cosme.common.constant.StateCode;
+import com.cosme.common.StateCode;
 import com.cosme.common.dto.PageModel;
 import com.cosme.common.dto.ResultDTO;
 import com.cosme.common.guava2.Lists2;

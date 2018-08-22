@@ -2,7 +2,7 @@ package com.cosme.front.adapter;
 
 import com.cosme.back.service.ProductService;
 import com.cosme.back.transformers.ProductTransformers;
-import com.cosme.common.constant.FixedPageSizeEnum;
+import com.cosme.common.FixedPageSizeEnum;
 import com.cosme.common.guava2.Lists2;
 import com.cosme.dto.ProductDTO;
 import com.cosme.param.ProductQueryParam;

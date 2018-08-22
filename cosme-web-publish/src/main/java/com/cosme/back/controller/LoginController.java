@@ -2,8 +2,8 @@ package com.cosme.back.controller;
 
 import com.cosme.back.adapter.UserAdapter;
 import com.cosme.back.service.UserService;
-import com.cosme.common.constant.AppConfig;
-import com.cosme.common.constant.StateCode;
+import com.cosme.common.AppConfig;
+import com.cosme.common.StateCode;
 import com.cosme.common.dto.ResultDTO;
 import com.cosme.common.util.AESUtil;
 import com.cosme.common.util.SessionUtils;

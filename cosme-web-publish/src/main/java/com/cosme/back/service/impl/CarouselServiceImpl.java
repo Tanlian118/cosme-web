@@ -3,7 +3,7 @@ package com.cosme.back.service.impl;
 import com.cosme.back.dao.CarouselDAO;
 import com.cosme.back.service.CarouselService;
 import com.cosme.back.transformers.CarouselTransformers;
-import com.cosme.common.constant.StateCode;
+import com.cosme.common.StateCode;
 import com.cosme.common.dto.PageModel;
 import com.cosme.common.dto.ResultDTO;
 import com.cosme.common.guava2.Lists2;
