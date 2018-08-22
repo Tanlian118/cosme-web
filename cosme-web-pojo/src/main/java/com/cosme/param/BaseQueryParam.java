@@ -4,13 +4,15 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
+import java.io.Serializable;
+
 /**
  * @author Tanlian
  * @create 2018-08-11 18:34
  **/
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class BaseQueryParam<T> {
+public class BaseQueryParam<T> implements Serializable {
 
     /**
      * 分页索引，默认0

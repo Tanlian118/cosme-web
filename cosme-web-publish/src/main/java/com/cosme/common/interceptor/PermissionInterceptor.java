@@ -1,7 +1,7 @@
 package com.cosme.common.interceptor;
 
 import com.alibaba.fastjson.JSON;
-import com.cosme.common.StateCode;
+import com.cosme.common.constant.StateCode;
 import com.cosme.common.dto.ResultDTO;
 import com.cosme.common.util.SessionUtils;
 import org.springframework.util.StringUtils;

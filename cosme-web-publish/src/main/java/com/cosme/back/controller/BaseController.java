@@ -1,6 +1,6 @@
 package com.cosme.back.controller;
 
-import com.cosme.back.service.UserService;
+import com.cosme.api.UserService;
 import com.cosme.common.util.SessionUtils;
 import com.cosme.dto.UserDTO;
 import com.cosme.param.UserQueryParam;

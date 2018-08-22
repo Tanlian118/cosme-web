@@ -14,7 +14,6 @@
 
     <context:property-placeholder location="classpath:data.properties" ignore-unresolvable="true"/>
 
-
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close">
         <!-- 基本属性 url、user、password -->

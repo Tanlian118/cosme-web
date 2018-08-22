@@ -1,10 +1,10 @@
 package com.cosme.back.adapter;
 
-import com.cosme.back.service.NewsService;
-import com.cosme.back.service.UserService;
+import com.cosme.api.NewsService;
+import com.cosme.api.UserService;
 import com.cosme.back.transformers.NewsTransformers;
-import com.cosme.common.FixedPageSizeEnum;
-import com.cosme.common.StateCode;
+import com.cosme.common.constant.FixedPageSizeEnum;
+import com.cosme.common.constant.StateCode;
 import com.cosme.common.converter.BaseTransformer;
 import com.cosme.common.dto.PageModel;
 import com.cosme.common.dto.ResultDTO;

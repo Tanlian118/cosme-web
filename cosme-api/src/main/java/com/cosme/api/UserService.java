@@ -1,4 +1,4 @@
-package com.cosme.back.service;
+package com.cosme.api;
 
 import com.cosme.common.dto.ResultDTO;
 import com.cosme.dto.UserDTO;

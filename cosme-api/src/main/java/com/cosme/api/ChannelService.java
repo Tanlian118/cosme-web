@@ -1,10 +1,9 @@
-package com.cosme.back.service;
+package com.cosme.api;
 
 import com.cosme.common.dto.PageModel;
 import com.cosme.common.dto.ResultDTO;
 import com.cosme.dto.ChannelDTO;
 import com.cosme.param.ChannelQueryParam;
-import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -12,7 +11,6 @@ import java.util.Set;
  * @author Tanlian
  * @create 2018-08-12 20:57
  **/
-@Service("channelService")
 public interface ChannelService {
 
     /**

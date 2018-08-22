@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import java.util.List;
  **/
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ChannelDTO {
+public class ChannelDTO implements Serializable {
 
     /**
      * 频道id

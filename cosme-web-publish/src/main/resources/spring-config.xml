@@ -44,7 +44,7 @@
         </mvc:interceptor>
     </mvc:interceptors>
 
-    <bean id="appConfig" class="com.cosme.common.AppConfig">
+    <bean id="appConfig" class="com.cosme.common.config.AppConfig">
         <property name="loginFailures" value="${user_login_failures}"/>
         <property name="bannedSeconds" value="${user_login_bannedSeconds}"/>
     </bean>

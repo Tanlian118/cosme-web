@@ -1,13 +1,13 @@
 package com.cosme.front.adapter;
 
-import com.cosme.back.service.CarouselService;
-import com.cosme.back.service.ChannelService;
-import com.cosme.back.service.NewsService;
-import com.cosme.back.service.ProductService;
+import com.cosme.api.CarouselService;
+import com.cosme.api.ChannelService;
+import com.cosme.api.NewsService;
+import com.cosme.api.ProductService;
 import com.cosme.back.transformers.CarouselTransformers;
 import com.cosme.back.transformers.ChannelTransformers;
 import com.cosme.back.transformers.NewsTransformers;
-import com.cosme.common.FixedPageSizeEnum;
+import com.cosme.common.constant.FixedPageSizeEnum;
 import com.cosme.common.guava2.Lists2;
 import com.cosme.dto.CarouselDTO;
 import com.cosme.dto.ChannelDTO;

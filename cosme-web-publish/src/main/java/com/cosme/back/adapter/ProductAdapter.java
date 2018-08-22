@@ -1,9 +1,9 @@
 package com.cosme.back.adapter;
 
-import com.cosme.back.service.ProductService;
+import com.cosme.api.ProductService;
 import com.cosme.back.transformers.ProductTransformers;
-import com.cosme.common.FixedPageSizeEnum;
-import com.cosme.common.StateCode;
+import com.cosme.common.constant.FixedPageSizeEnum;
+import com.cosme.common.constant.StateCode;
 import com.cosme.common.converter.BaseTransformer;
 import com.cosme.common.dto.PageModel;
 import com.cosme.common.dto.ResultDTO;

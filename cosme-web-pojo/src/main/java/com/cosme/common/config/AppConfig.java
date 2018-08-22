@@ -1,4 +1,4 @@
-package com.cosme.common.constant;
+package com.cosme.common.config;
 
 import lombok.AccessLevel;
 import lombok.Data;

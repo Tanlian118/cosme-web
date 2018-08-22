@@ -1,6 +1,6 @@
 package com.cosme.common.dto;
 
-import com.cosme.common.StateCode;
+import com.cosme.common.constant.StateCode;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;

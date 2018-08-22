@@ -1,4 +1,4 @@
-package com.cosme.common;
+package com.cosme.common.constant;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

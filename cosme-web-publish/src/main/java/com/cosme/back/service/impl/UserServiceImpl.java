@@ -1,8 +1,8 @@
 package com.cosme.back.service.impl;
 
 import com.cosme.back.dao.UserDAO;
-import com.cosme.back.service.UserService;
 import com.cosme.back.transformers.UsersTransformers;
+import com.cosme.api.UserService;
 import com.cosme.common.converter.BaseTransformer;
 import com.cosme.common.dto.ResultDTO;
 import com.cosme.common.guava2.Lists2;

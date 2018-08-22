@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Date;
  **/
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class CarouselDTO {
+public class CarouselDTO implements Serializable {
 
     /**
      * 轮播图id

@@ -1,4 +1,4 @@
-package com.cosme.back.service;
+package com.cosme.api;
 
 import com.cosme.common.dto.PageModel;
 import com.cosme.common.dto.ResultDTO;

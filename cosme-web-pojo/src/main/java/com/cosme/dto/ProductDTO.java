@@ -4,6 +4,8 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
+import java.io.Serializable;
+
 /**
  * @author Tanlian
  * @create 2018-08-11 18:56
@@ -11,7 +13,7 @@ import lombok.experimental.FieldDefaults;
 
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ProductDTO {
+public class ProductDTO implements Serializable {
 
     /**
      * 商品id
