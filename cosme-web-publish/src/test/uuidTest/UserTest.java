@@ -1,4 +1,4 @@
-package cosmeTest;
+package uuidTest;
 
 import org.junit.Test;
 

@@ -16,6 +16,7 @@ import com.cosme.param.UserQueryParam;
 import com.cosme.request.NewsAddRequest;
 import com.cosme.request.NewsListParam;
 import com.cosme.vo.NewsVO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -30,6 +31,7 @@ import java.util.stream.Collectors;
  * @author Tanlian
  * @create 2018-08-13 13:45
  **/
+@Slf4j
 @Service("newsAdapter")
 public class NewsAdapter {
 

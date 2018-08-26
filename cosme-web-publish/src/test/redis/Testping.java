@@ -59,9 +59,9 @@ public class Testping {
     public void msTest3() {
         Jedis jedisM = new Jedis("192.168.20.10", 6379);
         Jedis jedisS = new Jedis("192.168.20.10", 6380);
-        jedisM.set("A","A001");
+        jedisM.set("StaticTest","A001");
         jedisS.slaveof("192.168.20.10", 6379);
-        System.out.println(jedisS.get("A"));
+        System.out.println(jedisS.get("StaticTest"));
     }
 
     @Test

@@ -15,17 +15,17 @@ public class MapTest {
 
     /**
      * m1是基于哈希表的Map实现的的，一个Key对应一个Value，允许使用null键和null值
-      */
+     */
 
     @Test
     public void hashMapTest() {
         Map<Integer, String> m1 = Maps.newHashMap();
-        m1.put(1,"a");
-        m1.put(2,"b");
-        m1.put(3,"c");
-        m1.put(4,"d");
-        m1.put(5,"e");
-        m1.put(6,"f");
+        m1.put(1, "a");
+        m1.put(2, "b");
+        m1.put(3, "c");
+        m1.put(4, "d");
+        m1.put(5, "e");
+        m1.put(6, "f");
 
 //        Collection<String> m2 = m1.values();
 //        System.out.println(m2);
@@ -39,10 +39,10 @@ public class MapTest {
         boolean c = m1.containsValue("c");
         System.out.println(c);
 
-        m1.entrySet().forEach(v->{
+        m1.entrySet().forEach(v -> {
             String value = v.getValue();
             Integer key = v.getKey();
-            System.out.println(key + ":"+value);
+            System.out.println(key + ":" + value);
         });
 
         for (Map.Entry<Integer, String> entry : m1.entrySet()) {
@@ -61,7 +61,5 @@ public class MapTest {
 
         String a = m1.getOrDefault(1, "jnkj");
         System.out.println(a);
-
-
     }
 }
