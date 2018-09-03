@@ -24,7 +24,7 @@ public class ProductEntity {
     /**
      * 频道id
      */
-    String channelId;
+    Integer channelId;
 
     /**
      * 操作员Id

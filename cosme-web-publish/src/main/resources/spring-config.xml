@@ -48,4 +48,4 @@
         <property name="loginFailures" value="${user_login_failures}"/>
         <property name="bannedSeconds" value="${user_login_bannedSeconds}"/>
     </bean>
-</beans>d
+</beans>

@@ -12,7 +12,6 @@ public class JedisPoolUtil {
 
     private static volatile JedisPool jedisPool = null;
     private JedisPoolUtil() {}
-
     public static JedisPool getJedisPlloInstance() {
         if (null == jedisPool) {
             synchronized (JedisPoolUtil.class) {
@@ -30,6 +29,5 @@ public class JedisPoolUtil {
 
     public static void release(JedisPool jedisPool, Jedis jedis) {
         jedisPool.returnResourceObject(jedis);
-
     }
 }

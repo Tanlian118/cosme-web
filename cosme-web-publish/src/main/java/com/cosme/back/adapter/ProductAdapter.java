@@ -60,9 +60,6 @@ public class ProductAdapter {
         if (!StringUtils.hasText(productRequest.getJapaneseTitle())) {
             return ResultDTO.fail(StateCode.ILLEGAL_ARGS, "请输入日文标题");
         }
-        if (!StringUtils.hasText(productRequest.getProductChannel())) {
-            return ResultDTO.fail(StateCode.ILLEGAL_ARGS, "请选择商品频道");
-        }
         if (productRequest.getJapaneseTitle().length() > 20) {
             return ResultDTO.fail(StateCode.ILLEGAL_ARGS, "日文标题需在20个字以内");
         }

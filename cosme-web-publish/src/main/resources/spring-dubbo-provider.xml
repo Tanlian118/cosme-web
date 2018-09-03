@@ -5,5 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
   http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:service ref="carouselService" interface="com.cosme.api.CarouselService" version="1.0.0"/>
+    <dubbo:service ref="carouselService" interface="com.cosme.api.CarouselService" version="tan1.0.0"/>
+    <dubbo:service ref="channelService" interface="com.cosme.api.ChannelService" version="tan1.0.0"/>
+    <dubbo:service ref="newsService" interface="com.cosme.api.NewsService" version="tan1.0.0"/>
+    <dubbo:service ref="productService" interface="com.cosme.api.ProductService" version="tan1.0.0"/>
 </beans>

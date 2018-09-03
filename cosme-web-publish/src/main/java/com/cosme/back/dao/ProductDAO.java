@@ -17,16 +17,16 @@ import java.util.Set;
 public interface ProductDAO {
 
     @Insert({"INSERT INTO cosme_product(channel_id, operater_id,main_image, product_title, japanese_title,",
-            "product_channel, effect, weight, bar_code) ",
+            "effect, weight, bar_code) ",
             "VALUES(#{entity.channelId}, #{entity.operaterId}, #{entity.mainImage}, #{entity.productTitle},",
-            "#{entity.japaneseTitle}, #{entity.productChannel}, #{entity.effect}, #{entity.weight},#{entity.barCode})"})
+            "#{entity.japaneseTitle}, #{entity.effect}, #{entity.weight},#{entity.barCode})"})
     int save(@Param("entity") ProductEntity productEntity);
 
 
     @Update({"UPDATE cosme_product ",
             "SET main_image= #{entity.mainImage}, product_title= #{entity.productTitle},",
-            "japanese_title= #{entity.japaneseTitle},product_channel= #{entity.productChannel},",
-            "effect= #{entity.effect},weight= #{entity.weight}, bar_code= #{entity.barCode}",
+            "japanese_title= #{entity.japaneseTitle},effect= #{entity.effect},weight= #{entity.weight},",
+            "bar_code= #{entity.barCode}",
             "WHERE product_id= #{productId}"})
     int update(@Param("entity") ProductEntity productEntity);
 
