@@ -1,4 +1,4 @@
-package baseTest;
+package baseTest.innerStaticTest;
 
 /**
  * @author Tanlian

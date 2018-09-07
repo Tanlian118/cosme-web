@@ -1,4 +1,4 @@
-package baseTest;
+package baseTest.innerStaticTest;
 
 /**
  * @author Tanlian
@@ -6,6 +6,7 @@ package baseTest;
  **/
 public class InnerStatic {
 
+//    内部静态代码块，可以不依赖于外部类实例被实例化。
     static {
         System.out.println("A.static block");
     }
