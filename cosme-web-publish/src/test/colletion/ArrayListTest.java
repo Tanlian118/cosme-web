@@ -30,7 +30,6 @@ public class ArrayListTest {
         List<String> a3 = a2.subList(0, 2);
         System.out.println(a3);
         a3.add("1");
-
         a1.set(0, 9);
         List<String> a4 = a2.subList(1, 3);
         a1.addAll(Lists.newArrayList(3, 6, 7, 8));
@@ -40,6 +39,12 @@ public class ArrayListTest {
         Collections.sort(a1, (o1, o2) -> o1-o2);
         System.out.println();
 
+
+        List<Integer> list = Lists.newArrayList(1,2,3,4,5);
+        List<Integer> list2 = Lists.newArrayList(3,4,5,6,7);
+        list.retainAll(list2);
+        System.out.println(list);
+        System.out.println(list2);
 
     }
 
