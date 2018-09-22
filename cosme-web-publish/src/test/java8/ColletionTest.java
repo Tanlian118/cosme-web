@@ -19,13 +19,14 @@ public class ColletionTest {
             System.out.println(v);
         });
 
+//        Java编译器能够自动识别参数的类型，所以可以省略掉类型不写。
         Arrays.asList("a", "b", "c").sort((e1, e2) -> e1.compareTo(e2));
 
         Arrays.asList("a", "b", "c").sort((e1, e2) ->{
             int result = e1.compareTo(e2);
             return result;
         });
-
+        System.out.println();
 
 
     }

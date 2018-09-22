@@ -11,7 +11,7 @@ public class PraSingletonHungry {
 
     public PraSingletonHungry(){}
 
-    public static PraSingletonHungry getInstance() {
+    public static  PraSingletonHungry getInstance() {
         return instance;
     }
 }

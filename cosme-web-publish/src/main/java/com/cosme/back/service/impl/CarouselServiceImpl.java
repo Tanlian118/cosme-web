@@ -30,7 +30,7 @@ public class CarouselServiceImpl implements CarouselService {
     @Override
     public ResultDTO<Void> saveOrUpdateCarousel(CarouselDTO carouselDTO) {
         CarouselEntity carouselEntity = CarouselTransformers.DTO_TO_ENTITY.apply(carouselDTO);
-        if (carouselDTO.getCosmeImageId() == null) {
+        if (carouselEntity.getCosmeImageId() == null) {
             int save = carouselDAO.save(carouselEntity);
             System.out.println(save);
             return ResultDTO.successfy();

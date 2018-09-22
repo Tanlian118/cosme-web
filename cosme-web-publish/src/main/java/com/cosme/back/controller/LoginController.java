@@ -42,7 +42,6 @@ public class LoginController {
     private RedisTemplate<String, String> redisTemplate;
 
     private static final String LOGIN_USERNAME_KEY = "COSME_LOGIN_NAME:";
-
     /**
      * 用户登录
      *

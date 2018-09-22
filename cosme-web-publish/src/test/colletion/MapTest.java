@@ -25,8 +25,7 @@ public class MapTest {
         m1.put(3, "c");
         m1.put(4, "d");
         m1.put(5, "e");
-        m1.put(6, "f");
-
+        m1.put(6, "e");
 //        Collection<String> m2 = m1.values();
 //        System.out.println(m2);
 //        String s = m1.get(1);

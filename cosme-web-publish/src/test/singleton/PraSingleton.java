@@ -8,11 +8,12 @@ package singleton;
  **/
 public class PraSingleton {
 
-    private static PraSingleton instance = null;
-    public static synchronized PraSingleton getInstance() {
+   private static PraSingleton instance = null;
+
+    public static synchronized PraSingleton  getInstance() {
         if (instance == null) {
-            instance = new PraSingleton();
+            return new PraSingleton();
         }
-            return instance;
+        return instance;
     }
 }

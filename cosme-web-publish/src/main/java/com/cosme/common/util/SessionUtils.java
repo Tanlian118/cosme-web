@@ -38,7 +38,6 @@ public class SessionUtils {
         cookieUtils.setExpireTimeBySeconds(COOKIE_EXPIRE_SECOND);
         String encryptUserId = AESUtil.encrypt(userId + "|" + System.currentTimeMillis() / 1000, PUBLIC_KEY);
         cookieUtils.addCookie(APP_KEY, encryptUserId);
-        request.setAttribute("sessionId", userId);
     }
 
     public static void deleteCookie(HttpServletRequest request, HttpServletResponse response) {
